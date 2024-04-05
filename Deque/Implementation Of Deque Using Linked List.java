@@ -1,4 +1,7 @@
-class Node<T extends Number>{
+package Arrays;
+
+
+class Node<T extends Object>{
 	T data;
 	Node next;
 	Node prev;
@@ -10,7 +13,7 @@ class Node<T extends Number>{
 	
 }
 
-public class DequeImplementationUsingLinkedList<T extends Number> {
+public class DequeImplementationUsingLinkedList<T extends Object> {
 	
 	Node front, rear;
 	
@@ -93,14 +96,14 @@ public class DequeImplementationUsingLinkedList<T extends Number> {
 		}
 	}
 	
-	Number start() {
+	Object start() {
 		if(front == null)return -1;
 		else {
 			return front.data;
 		}
 	}
 	
-	Number end() {
+	Object end() {
 		if(front == null)return -1;
 		else {
 			return rear.data;
@@ -108,20 +111,30 @@ public class DequeImplementationUsingLinkedList<T extends Number> {
 	}
 
 	public static void main(String[] args) {
-		DequeImplementationUsingLinkedList<Double> d = new DequeImplementationUsingLinkedList();
-		d.push_back(5.9);
-		d.push_back(18.7);
-		d.pop_back();
+//		DequeImplementationUsingLinkedList<Double> d = new DequeImplementationUsingLinkedList();
+//		d.push_back(5.9);
+//		d.push_back(18.7);
+//		d.pop_back();
+//		System.out.println(d.start());
+//		System.out.println(d.end());
+//		d.pop_back();
+//		d.pop_back();
+//		d.push_back(18.6);
+//		d.push_back(18.9);
+//		d.push_back(1d);
+//		System.out.println(d.start());
+//		d.pop_front();
+//		System.out.println(d.start());
+//		
+		DequeImplementationUsingLinkedList<String> d = new DequeImplementationUsingLinkedList();
+		d.push_back("Hi");
+		d.push_back("ello");
 		System.out.println(d.start());
 		System.out.println(d.end());
 		d.pop_back();
-		d.pop_back();
-		d.push_back(18.6);
-		d.push_back(18.9);
-		d.push_back(1d);
 		System.out.println(d.start());
-		d.pop_front();
-		System.out.println(d.start());
+		
+		
 
 	}
 
