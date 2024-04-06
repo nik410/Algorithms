@@ -35,7 +35,10 @@ public class TreeImplementation {
 		TreeNode rootNode;
 		System.out.println("Enter root Node: ");
 		rootNode = binaryTree();
-
+		
+		//Time complexity: O(n)
+		//Space Complexity: In average casees like balanced binary tree or such O(height of tree)
+		//		    In worst case that is a tree like a linked list O(n) where n is number of nodes
 	}
 
 }
