@@ -4,6 +4,7 @@ This is an important data structure as it is used to implement the java collecti
 Implentation of deque by two ways:
 
 Array Deque:    Deque<Integer> deque = new ArrayDeque<>();
+
 Linked List:   Deque<Integer> deque = new LinkedList<>();
 
 Some of its important and most frequently used functions are:
