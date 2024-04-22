@@ -20,7 +20,7 @@ public class BinarySearchTreeImplementation {
 		}
 	}
 	
-//	public static TreeNode insert(TreeNode root, int target) {
+//	public static TreeNode insertUsingIterartive(TreeNode root, int target) {
 //		TreeNode temp = root;
 //		if(root == null) {
 //			TreeNode addNode =new TreeNode(target);
@@ -49,6 +49,8 @@ public class BinarySearchTreeImplementation {
 //		return root;
 //		
 //	}
+
+	//Using Recursion
 	
 	public static TreeNode insert(TreeNode root, int target) {
 		
@@ -68,6 +70,16 @@ public class BinarySearchTreeImplementation {
 		
 	}
 	
+	public static boolean search(TreeNode root, int target) {
+		if(root == null)return false;
+		if(root.data == target)return true;
+		
+		boolean left = search(root.left, target);
+		boolean right = search(root.right, target);
+		
+		return left || right;
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
@@ -78,28 +90,33 @@ public class BinarySearchTreeImplementation {
 			root = insert(root, arr[i]);
 		}
 
-    //For checking 
-    
-		// Queue<TreeNode> q = new LinkedList();
-		// q.add(root);
+		//Insertion Worst Time complexity: O(n) in case of a stricly increasing or decreasing and overall creation of bst is O(n^2)
 		
-		// while(!q.isEmpty()) {
-		// 	for(int i = 0; i < q.size(); i++) {
-		// 		TreeNode temNode = q.peek();
-				
-		// 		if(temNode.left != null) {
-		// 			q.add(temNode.left);
-		// 		}
-				
-		// 		if(temNode.right != null) {
-		// 			q.add(temNode.right);
-		// 		}
-				
-		// 		System.out.println(q.poll().data);
-		// 	}
-		// }
+
+
+		//Searching an element takes average tc of O(log n) while worst is O(n) in strictly increasing or decreasing  
+		System.out.println(search(root, 50));
 		
-		
+//		Queue<TreeNode> q = new LinkedList();
+//		q.add(root);
+//		
+//		while(!q.isEmpty()) {
+//			for(int i = 0; i < q.size(); i++) {
+//				TreeNode temNode = q.peek();
+//				
+//				if(temNode.left != null) {
+//					q.add(temNode.left);
+//				}
+//				
+//				if(temNode.right != null) {
+//					q.add(temNode.right);
+//				}
+//				
+//				System.out.println(q.poll().data);
+//			}
+//		}
+//		
+//		
 		
 
 	}
