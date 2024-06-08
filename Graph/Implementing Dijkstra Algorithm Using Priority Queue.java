@@ -25,7 +25,8 @@ class Solution
     static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S)
     {
 
-        // Used in Sparse Graph 
+        // Used in Sparse Graph mostly used in real life
+        // Dijkstra Algo doesn't work in negetive weights
         // TC : O(elogv)
         // SC : O(v + e)
         
