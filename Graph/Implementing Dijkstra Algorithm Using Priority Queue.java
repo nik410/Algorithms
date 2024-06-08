@@ -25,7 +25,7 @@ class Solution
     static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S)
     {
 
-        //Used in Sparse Graph 
+        // Used in Sparse Graph 
         // TC : O(elogv)
         // SC : O(v + e)
         
