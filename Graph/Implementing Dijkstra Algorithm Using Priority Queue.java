@@ -24,6 +24,11 @@ class Solution
     }
     static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S)
     {
+
+        //Used in Sparse Graph 
+        // TC : O(elogv)
+        // SC : O(v + e)
+        
         int explored[] = new int[V];
         int dist[] = new int[V];
         Arrays.fill(dist, Integer.MAX_VALUE);
